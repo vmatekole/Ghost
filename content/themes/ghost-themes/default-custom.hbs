@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})" class="fadeIn"{{/if}}>
+<html lang="en" {{#if @blog.cover}}style="background-image: url({{@blog.cover}});" class="fadeIn"{{/if}} {{#is "index"}} class="green-background" {{/is}}>
     <head>
 
         {{! Document settings and metadata }}
