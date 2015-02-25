@@ -1,79 +1,29 @@
-<!doctype html>
-<html lang="en" style="background-image: url('../../content/images/2015/02/2013-09-01-18-18-53-1-1.jpg')" class="fadeIn">
-    <head>
+{{!< default}}
+{{#post}}
 
-        {{! Document settings and metadata }}
-        <title>{{meta_title}}</title>
-        <meta charset="utf-8" />
-        <meta name="designer" content="Hayden Bleasel" />
-        <meta name="rating" content="general" />
-        <meta name="keywords" content="ghost, blog, {{meta_title}}" />
+    {{> post-meta}}
 
-        {{! iOS, Android and Windows stuff }}
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <meta name="format-detection" content="telephone=yes" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="msapplication-TileImage" content="{{asset 'images/windows-tile.png'}}" />
-        <meta name="msapplication-TileColor" content="#262A2D" />
-
-        {{! Robots and Viewport }}
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-        {{! OpenGraph for Facebook }}
-        <meta property="og:title" content="{{meta_title}}" />
-        <meta property="og:locale" content="en_US" />
-
-        {{! Twitter Card }}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="{{meta_title}}" />
-
-        {{! Icons }}
-        <link rel="icon" href="{{asset 'favicon.ico'}}" />
-        <link rel="icon" sizes="196x196" href="{{asset 'images/android-homescreen.png'}}" />
-        <link rel="apple-touch-icon" href="{{asset 'images/apple-touch-icon.png'}}" />
-
-        {{! Prerendering and Prefetching }}
-        {{#if @blog.cover}}
-            <link rel="prerender" href="{{@blog.cover}}" />
-            <link rel="prefetch" href="{{@blog.cover}}" />
-        {{/if}}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com/" />
-
-        {{! Scripts and Stylesheets }}
-        <link rel="stylesheet" href="{{asset 'css/normalize.css'}}" />
-        <link rel="stylesheet" href="{{asset 'css/basics.css'}}" />
-        <link rel="stylesheet" href="{{asset 'css/animate.css'}}" />
-        <link rel="stylesheet" href="{{asset 'css/highlight.css'}}" />
-        <link rel="stylesheet" href="{{asset 'css/phantom-custom.css'}}" />
-        <script src="{{asset 'js/html5shiv-printshiv.js'}}"></script>
-        <script src="{{asset 'js/respond.js'}}"></script>
-
-        {{! Page-Specific Metadata }}
-        {{{block "meta"}}}
-
-        {{ghost_head}}
-
-    </head>
-    <body class="{{body_class}}">
-        <div class="main">
-            {{{body}}}
+     <header>
+        <div class="container" data-stellar-ratio="0.75">
+            <h1 class="animated fadeInUp">Victor Matekole</h1>
+                <div class="author animated clearfix fadeInUp">
+                    {{#author}}
+                        <img src="{{image}}" alt="{{name}}" />
+                    {{/author}}
+                </div>
+                <div class="animated profile-icons fadeInUp">
+                    <a title="Email Victor" href=mailto:"victor@matekole.com"><i class="fa fa-envelope-o fa-lg"></i></a>
+                    <a title="Victor's public key" href="/victors-public-key"><i class="fa fa-key fa-lg"></i>                 
+                    <a title="Github profile" href="http://github.com/vmatekole"><i class="fa fa-github fa-lg"></i></a>
+                    <a title="LinkedIn profile" href="http://linked.com/vmatekole"><i class="fa fa-linkedin fa-lg"></i></a>
+                    <a title="Twitter profile" href="http://twitter.com/vmatekole"><i class="fa fa-twitter fa-lg"></i></a>
+                </div>
         </div>
-        <footer class="animated fadeIn" id="footer">
-            <div class="container text-center">
-                <!--<p class="copyright"><span>Made by {{@blog.title}}.</span> <span>Powered by Ghost.</span></p>
-                <a href="https://github.com/haydenbleasel/phantom" class="theme">Theme: Phantom by Hayden Bleasel</a>-->
-            </div>
-        </footer>
+    </header>
 
-        {{ghost_foot}}
 
-        {{! Deferred scripts }}
-        <script src="{{asset 'js/fastclick.js'}}"></script>
-        <script src="{{asset 'js/stellar.js'}}"></script>
-        <script src="{{asset 'js/highlight.js'}}"></script>
-        <script src="{{asset 'js/phantom.js'}}"></script>
-        <script src="{{asset 'js/custom.js'}}"></script>
-    </body>
-</html>
+
+{{! Temporary indentation shift for Handlebars issue }}
+{{> content}}
+
+{{/post}}
