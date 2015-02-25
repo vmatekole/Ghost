@@ -101,22 +101,121 @@ body {
 	font-family:quicksandregular,'Open Sans', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif;
 }
 
- .bgImg, html {
-  	background: no-repeat center center fixed; 
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	rgba:(100,200,300,500);
-}
 h1, h2 {
 	font-family:bebasregular;
 	letter-spacing: 0.05em;
 }
 
 .green-background {
-	background:rgba(93, 113, 80, 0.3);	
+	background:rgba(93, 113, 80, 0.1);
 }
+
+.darken-text time {
+	color:black;
+}
+
+.lighten-text {
+	color:white !important;
+}
+
+ html{
+	content:"";
+ 	background: no-repeat url("../../content/images/about.jpg") center center fixed;
+ 	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: rgba(93,113,80,0.4);
+}
+
+
+.tag-about p{
+	color:black;
+
+}
+.tag-about {
+	background:rgba(93,113,80,0.4);
+}
+
+.tag-about header {
+	height:400px;
+}
+
+.tag-about header:before {
+	background:rgba(93,113,80,0.4) !important;
+}
+
+.hide {
+	display:none;
+}
+
+.no-background {
+	background:none;
+}
+.profile-icons i {
+	padding:10px 5px 5px 5px;
+	color:black;
+}
+
+.profile-icons a {
+	border-bottom: 0px;
+}
+
+.info a {
+	color:black;
+}
+
+.post-template {
+	background:rgba(93,113,80,0.15);
+}
+
+.share a {
+	padding:7px 7px 7px 7px;
+}
+
+.blog-icon {
+	margin: 20px 5px 5px 20px;
+    height: 62px;
+    width: 62px;
+    border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border: 1px solid #000000;
+	letter-spacing: 0.15em;	
+}
+
+
+.blog-icon > a:hover:before{
+	content:"";
+	position:absolute;
+	height: 62px;
+    width: 62px;
+    border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border: 7px solid #000000;
+}
+
+.blog-icon a:hover {
+	opacity:1;
+	color:black !important;
+}
+
+.blog-icon > a > span {
+	font-family: bebasregular;
+	position:absolute;
+	padding: 20px 9px;
+}
+
+.blog-icon a {
+	opacity:0;
+}
+
+.lighten-text-hover a:hover {
+	color:white !important;
+}
+
+
 /* end of custom css */
 
 p, ul, ol {
@@ -190,9 +289,10 @@ strong {
 .navigation {
 	height:90px;
 	font-weight:100;
-	background:#1b1f23;
 	-webkit-animation-duration:1s;
 	animation-duration:1s;
+	position:absolute;
+	z-index: 100;
 }
 .content, .brand {
 	display:block;
@@ -228,6 +328,7 @@ header:before {
 	width:100%;
 	height:100%;
 	content:"";
+	background:rgba(93, 113, 80, 0.4);
 }
 header .container {
 	padding-top:130px;
@@ -368,7 +469,7 @@ article input:focus {
 	margin-top: -20px;
 	border-radius: 50%;
 }
- 
+
 .author .info {
 	width: 385px;
 	float: left;
