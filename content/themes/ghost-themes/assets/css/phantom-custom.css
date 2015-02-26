@@ -106,16 +106,16 @@ h1, h2 {
 	letter-spacing: 0.05em;
 }
 
-.green-background {
-	background:rgba(93, 113, 80, 0.1);
+.green-background, .tag-about article, header {
+	background:rgba(93, 113, 80, 0.2);
 }
 
 .darken-text time {
 	color:black;
 }
 
-.lighten-text {
-	color:white !important;
+.lighten-text, .lighten-text a  {
+	color:#FFF !important;
 }
 
  html{
@@ -125,16 +125,12 @@ h1, h2 {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	background-color: rgba(93,113,80,0.4);
 }
 
 
 .tag-about p{
 	color:black;
 
-}
-.tag-about {
-	background:rgba(93,113,80,0.4);
 }
 
 .tag-about header {
@@ -145,7 +141,6 @@ h1, h2 {
 	display:none;
 }
 .tag-about header:before {
-	background:rgba(93,113,80,0.4) !important;
 }
 
 .hide {
@@ -166,10 +161,6 @@ h1, h2 {
 
 .info a {
 	color:black;
-}
-
-.post-template {
-	background:rgba(93,113,80,0.15);
 }
 
 .share a {
@@ -211,11 +202,28 @@ h1, h2 {
 }
 
 .blog-icon a {
+	color:black;
 	opacity:0;
+}
+
+.lighten-text-hover a{
+	color:white;
 }
 
 .lighten-text-hover a:hover {
 	color:white !important;
+}
+
+.lighten-text-hover > a:hover:before{
+	content:"";
+	margin: -1px 0px 0px -2px;
+	position:absolute;
+	height: 65px;
+    width: 65px;
+    border-radius: 53%;
+	-moz-border-radius: 53%;
+	-webkit-border-radius: 53%;
+	border: 7px solid white;
 }
 
 .author  {
@@ -336,7 +344,6 @@ header:before {
 	width:100%;
 	height:100%;
 	content:"";
-	background:rgba(93, 113, 80, 0.4);
 }
 header .container {
 	padding-top:130px;
